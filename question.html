@@ -1,1 +1,89 @@
-html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Pride and Prejudice Quiz App</title>
+	<meta name="description" content="A quiz to test your knowledge of the best novel ever written, Pride and Prejudice.">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <section id="question-page" role="main">
+    <h2 id="question">Who was the author(ess) of Pride and Prejudice?</h2>
+    <form>
+      <fieldset>
+        <label>
+          <input class="answer" type="radio" name="option" checked></input>
+          <span>Mary Shelley</span>
+        </label>
+  
+        <label>
+          <input class="answer" type="radio" name="option"></input>
+          <span>Henry David Thoreau</span>
+        </label>
+  
+        <label>
+          <input class="answer" type="radio" name="option"></input>
+          <span>Charlotte Brontë</span>
+        </label>
+  
+        <label>
+          <input class="answer" type="radio" name="option"></input>
+          <span>Jane Austen</span>
+        </label>
+      </fieldset>  
+      <button id="js-submit-button">Submit</button>
+    </form>
+
+    <div id="status-bar">
+      <span id="question-count">Question: 1/10</span>
+      <span id="score-count">Score: 1/10</span>
+    </div>
+    </section>
+    <style>
+      span {
+        font-family:'Satisfy', cursive;
+        font-size: 30px;
+        color: white;
+        font-weight: 900;
+      }
+      
+      #question-page {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      fieldset {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 10%;
+        min-height: 300px;
+        border: none;
+      }
+
+      label {
+        margin-bottom: 1em;
+        font-size: 1.5em;
+      }
+
+      #js-submit-button {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+      }
+
+      #question-count, #score-count {
+        display: inline-block;
+        font-size: 1.6em;
+        margin: 0 .6em .6em;
+      }
+
+      #score-count {
+        float: right;
+      }
+
+    </style>
+</body>
